@@ -51,9 +51,7 @@ public class Financeiro{
         String valor = Double.toString(valorDouble);
         receita.add(desc);
         receita.add(valor);
-        for(String receitas : receita) {
-            System.out.println(receitas);
-        }
+
         opcx.AdicionaSaldoCaixa(valorDouble);
         
         menu.MainMenu(true);
@@ -90,21 +88,13 @@ public class Financeiro{
 
         int opc = sc.nextInt();
         if (opc == 1){
-            for(String receita : receita) {
-                System.out.println(receita);
-            }
+            System.out.println("Colocar aqui a Lista de receitas");
         } else {
-            GetListDespesas();
+            System.out.println("Colocar aqui a Lista das despesas");
         }
 
         menu.MainMenu(true);
     }
 
-
-    private void GetListDespesas() {
-        for(String despesas : despesas) {
-            System.out.println(despesas);
-        }
-    }
 
 }
