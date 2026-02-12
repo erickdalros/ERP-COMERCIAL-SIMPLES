@@ -3,7 +3,7 @@ package Menu;
 import java.util.Scanner;
 import Util.LimparTerminal;
 import Financeiro.Financeiro;
-
+import Estoque.Estoque;
 public class Menu {
     
     public boolean ativo; 
@@ -11,6 +11,7 @@ public class Menu {
     Scanner sc =  new Scanner(System.in);
     LimparTerminal lt = new LimparTerminal();
     Financeiro financeiro = new Financeiro();
+    Estoque estoque = new Estoque();
 
     public void MainMenu(boolean ativo){
 
@@ -18,12 +19,8 @@ public class Menu {
             System.out.println("Bem vindo ao Sistema de ERP ");
             System.out.println("Opções ERP: ");
             System.out.println("[1] - Financeiro ");
-            System.out.println("[2] - Contábilidade ");
-            System.out.println("[3] - Estoque / almoxarifado");
-            System.out.println("[4] - CRM ");
-            System.out.println("[5] - Recursos Humanos ");
-            System.out.println("[6] - Consórcio ");
-            System.out.println("[7] - Fiscal e Tributos ");
+            System.out.println("[2] - Estoque / almoxarifado");
+            System.out.println("[3] - Fiscal e Tributos ");
 
             System.out.println("Digite o setor que deseja acessar: ");
             int opc = sc.nextInt();
@@ -36,20 +33,10 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Acessando menu....");
+                    lt.limpar();
+                    estoque.MainEstoque();
                     break;
                 case 3:
-                    System.out.println("Acessando menu....");
-                    break;
-                case 4:
-                    System.out.println("Acessando menu....");
-                    break;
-                case 5:
-                    System.out.println("Acessando menu....");
-                    break;
-                case 6:
-                    System.out.println("Acessando menu....");
-                    break;
-                case 7:
                     System.out.println("Acessando menu....");
                     break;
                 default:
