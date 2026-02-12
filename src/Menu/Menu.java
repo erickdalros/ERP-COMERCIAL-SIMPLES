@@ -4,6 +4,8 @@ import java.util.Scanner;
 import Util.LimparTerminal;
 import Financeiro.Financeiro;
 import Estoque.Estoque;
+import Fiscal.GerarNF;
+
 public class Menu {
     
     public boolean ativo; 
@@ -12,6 +14,7 @@ public class Menu {
     LimparTerminal lt = new LimparTerminal();
     Financeiro financeiro = new Financeiro();
     Estoque estoque = new Estoque();
+    GerarNF gerarNF =  new GerarNF();
 
     public void MainMenu(boolean ativo){
 
@@ -38,6 +41,8 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Acessando menu....");
+                    lt.limpar();
+                    gerarNF.GerarNota();
                     break;
                 default:
                     System.out.println("Nenhuma opção selecionada....");   
